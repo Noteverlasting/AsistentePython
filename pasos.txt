@@ -1,0 +1,41 @@
+PASOS PARA EL DESARROLLO DE UN PROYECTO EN PYTHON
+
+1.
+Crear un entorno virtual para mantener las dependencias organizadas y evitar conflictos. 
+
+    python -m venv venv
+
+2.
+Activar el entorno virtual
+
+source venv/bin/activate (en Linux/Mac)
+venv\Scripts\activate (en Windows)
+
+3.
+Importar librerias de voz
+
+    pip install SpeechRecognition
+    pip install pyAudio
+    pip install pygame
+    pip install playsound
+    pip install pyttsx3
+        - Voces de google
+    pip install gtts  (para su uso es gTTS) (es complicado de gestionar...necesita >> pip install --upgrade pip setuptools wheel)
+
+-SE PUEDEN INSTALAR TODAS EN UNA LINEA: pip install SpeechRecognition pyAudio pygame gtts
+
+4.
+Recopilar las librerias/dependencias necesarias para ejecutar el proyecto 
+CADA VEZ QUE SE INSTALE ALGUNA DEPENDENCIA!!!!
+
+    pip freeze > requirements.txt
+
+5.
+Recuperar las dependencias desde el archivo requirements.txt
+
+    pip install -r requirements.txt
+
+
+6.
+Para desinstalar
+    pip uninstall nombre_dependencia
