@@ -27,6 +27,8 @@ def audio_pc():
 def respuesta_pc(texto):
     try:
         engine = pyttsx3.init()  # Inicializa el motor de texto a voz
+        engine.setProperty('rate', 150)  # Ajusta la velocidad de la voz (150 es un valor común)
+        engine.setProperty('volume', 1)  # Ajusta el volumen (0.0 a 1.0)
         engine.say(texto) #Convierte el texto a voz
         engine.runAndWait()  # Espera a que termine de hablar
     except:
