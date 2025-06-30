@@ -3,6 +3,7 @@
 import speech_recognition as sr
 import pyttsx3
 import io 
+import datetime
 
 # funcion para que la máquina escuche lo que decimos y lo convierta a texto
 def audio_pc():
@@ -34,4 +35,33 @@ def respuesta_pc(texto):
     except:
         print("Lo siento, no he podido hablar.")
 
-respuesta_pc("Hola, soy tu asistente virtual. ¿En qué puedo ayudarte?")  # Prueba de la función de respuesta
+# respuesta_pc("Hola, soy tu asistente virtual. ¿En qué puedo ayudarte?")  # Prueba de la función de respuesta
+
+#FUNCIONES EXTRA
+
+def dia_semana():
+    #Obtenemos el dia de la semana
+    dia = datetime.date.today()
+    # print(dia.weekday()) #Imprime el número del día de la semana (0=lunes, 6=domingo)
+
+    nombres_dias = {
+        0: "Lunes",
+        1: "Martes",
+        2: "Miércoles",
+        3: "Jueves",
+        4: "Viernes",
+        5: "Sábado",
+        6: "Domingo"
+    }
+    respuesta_pc(f"Hoy es {nombres_dias[dia.weekday()]}")  # Responde con el nombre del día de la semana
+
+dia_semana()
+
+def hora_actual():
+    #Variable para almacenar la hora actual
+    hora = datetime.datetime.now()
+    mensajehora = f"Son las {hora.hour} horas, {hora.minute} minutos y {hora.second} segundos"
+    respuesta_pc(mensajehora)
+
+
+hora_actual()
