@@ -101,9 +101,6 @@ def centro_de_peticiones():
             elif "qué día es hoy" in peticion:
                 dia_semana()
                 continue
-            elif "eso es todo" in peticion or "fin del programa" in peticion:
-                respuesta_pc("Hasta luego, puerqui")
-                break
             elif "cuéntame un chiste" in peticion:
                 respuesta_pc(pyjokes.get_joke(language='es', category='all'))
                 continue
@@ -111,7 +108,13 @@ def centro_de_peticiones():
                 respuesta_pc("A tus ordenes puerquita")
                 pywhatkit.playonyt(peticion)
                 continue
-
+            elif "abre el navegador" in peticion:
+                webbrowser.open("https://www.google.com")
+                respuesta_pc("Abriendo el navegador, puerqui")
+                continue
+            elif "eso es todo amiga" in peticion or "calla serda" in peticion:
+                respuesta_pc("Hasta luego, puerqui")
+                break
         except:
             respuesta_pc("Lo siento, no he podido entenderte. Por favor, inténtalo de nuevo.")
 
