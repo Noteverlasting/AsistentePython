@@ -18,7 +18,14 @@ Importar librerias de voz
     pip install pyAudio
     pip install pygame
     pip install playsound
+        -Voces del sistema
     pip install pyttsx3
+        -Bromas
+    pip install pyjokes
+        -Abrir youtube
+    pip install pywhatkit
+        -Abrir navegador (está instalado, hay que hacer import en el archivo .py)
+    pip install webbrowser
         - Voces de google
     pip install gtts  (para su uso es gTTS) (es complicado de gestionar...necesita >> pip install --upgrade pip setuptools wheel)
 
